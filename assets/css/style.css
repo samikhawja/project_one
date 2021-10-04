@@ -1,0 +1,39 @@
+body {
+    background-color: #cccccc;
+}
+
+#logo {
+    height: 250px;
+    width: auto;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 40.5%;
+}
+
+.card{
+    height: 250px;
+    width: 750px;
+    border: 3px solid #3d3d3d;
+    margin: auto;
+    padding: 10px;
+    background:lightslategrey;
+    opacity: 85%;
+    display: inline-block;
+    margin-left: 22%;
+}
+
+#form1 {
+    width: 50%;
+    margin-top: 6.5%;
+    margin-left: 25%;
+}
+
+#dropdownMenuButton {
+    width: 50%;
+    margin-left: 25%;
+}
+
+#searchbtn {
+    width: 50%;
+    margin-left: 25%;
+}
