@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Library of Congress</title>
+        <title>Name Worth</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/style.css">
@@ -29,12 +29,12 @@
 
 
         <main>
-            <div class="card">
-                <div class="form-outline">
-                    <input type="search" id="form1" class="form-control" placeholder="What is your name worth?"
+            <div class="card" id="main_container">
+                <div class="form-outline" id="form_container">
+                    <input type="search" id="form_input" class="form-control" placeholder="What is your name worth?"
                     aria-label="Search" />
                 </div>
-                <div class="dropdown">
+                <div class="dropdown" id="dropdown_container">
                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       So many options...
                     </button>
@@ -44,7 +44,10 @@
                       <a class="dropdown-item" href="#">Something else here</a>
                     </div>
                 </div>
-                <button type="button" class="btn btn-outline-primary" id="searchbtn">Let's Check!</button>
+                <div class="input-group-button">
+                    <input type="submit" class="button" value="Let's Check!" id="searchbtn">
+                </div>
+                <div class="card hidden" id="results"></div>
             </div>
         </main>
 

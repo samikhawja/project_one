@@ -22,7 +22,7 @@ body {
     margin-left: 22%;
 }
 
-#form1 {
+#form_input {
     width: 50%;
     margin-top: 6.5%;
     margin-left: 25%;
@@ -36,4 +36,13 @@ body {
 #searchbtn {
     width: 50%;
     margin-left: 25%;
+    background-color: #a9a9a9;
+}
+
+#searchbtn:hover {
+    background-color: lightskyblue;
+}
+
+.hidden {
+    display: none;
 }
