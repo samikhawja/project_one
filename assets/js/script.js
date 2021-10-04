@@ -18,3 +18,55 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////
+//Kanye API
+function getKanyeQuote () {
+$.ajax({
+  url: kanyeURL,
+  method: "GET"
+}).then(function(response){
+  console.log("this is the kanye quote: ", response);
+  $('#kanyeQuote').text(response);
+})
+}
+getKanyeQuote();
+console.log("did it work? " getKanyeQuote);
