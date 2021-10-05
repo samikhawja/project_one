@@ -2,14 +2,21 @@ body {
     background-color: #cccccc;
 }
 
-img {
-    height: 250px;
-    width: auto;
+header {
+    background-color: #154f30;
+    border: 5px solid #4b5320;
 }
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 250px;
+  }
 
 .card {
     text-align: center;
-    margin-top: 10%;
+    margin-top: 2.5%;
 }
 
 .quote {
