@@ -68,9 +68,10 @@ header {
 }
 
 #kanyeQuote {
-    margin-left: 10px;
-    margin-right: 10px;
-    ;
+    margin:auto;
+    padding:auto;
+    min-height: fit-content;
+    
     
 
 }
