@@ -5,7 +5,8 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("transBtn");
 
 // When the user clicks on the button, open the modal
-document.getElementById("transBtn").onclick = function() {
+document.getElementById("transBtn").onclick = function(event) {
+  event.preventDefault()
   modal.style.display = "block";
 }
 
