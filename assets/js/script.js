@@ -5,7 +5,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("transBtn");
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+document.getElementById("transBtn").onclick = function() {
   modal.style.display = "block";
 }
 
@@ -57,13 +57,14 @@ window.onclick = function(event) {
 ///////////////
 //Kanye API
 function getKanyeQuote () {
+  var kanyeURL = 'https://api.kanye.rest/'
 $.ajax({
   url: kanyeURL,
   method: "GET"
 }).then(function(response){
   console.log("this is the kanye quote: ", response);
-  $('#kanyeQuote').text(response);
+  $('#kanyeQuote').text(response.quote);
 })
 }
 getKanyeQuote();
-console.log("did it work? " getKanyeQuote);
+console.log("did it work? ", getKanyeQuote);
