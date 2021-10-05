@@ -11,6 +11,10 @@ img {
     text-align: center;
 }
 
+.quote {
+    width: 75%;
+}
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
