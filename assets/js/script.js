@@ -21,8 +21,29 @@ window.onclick = function(event) {
 
 
 
+// Activate KanyeQuote when clicked
+btn.addEventListener("click", function(){getKanyeQuote()})
 
 
+function getKanyeQuote(){
+  fetch("https://api.kanye.rest")
+    .then(function(response){
+      return response.json()
+    })
+    .then(function(data){
+      modal.textContent= data.quote
+      quoteArray=data.quote.split(" ")
+      var textInput = ""
+      for (i=0;i<quoteArray.length-1;i++){
+        textInput.concat(quoteArray[i]+"%20")
+
+      }
+      textInput.concat(quoteArray[quoteArray.length-1])
+
+      translateYoda()
+      
+  })
+}
 
 
 
@@ -68,5 +89,7 @@ $.ajax({
   $('#kanyeQuote').text(response);
 })
 }
-getKanyeQuote();
-console.log("did it work? " getKanyeQuote);
+// getKanyeQuote();
+// console.log("did it work? " + getKanyeQuote());
+
+
