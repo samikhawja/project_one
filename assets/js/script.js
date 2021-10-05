@@ -2,10 +2,7 @@
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("searchbtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+var btn = document.getElementById("transBtn");
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
