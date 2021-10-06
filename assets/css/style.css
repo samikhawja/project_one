@@ -48,6 +48,15 @@ header {
     text-align: center;
 }
 
+#refresh{
+    border: black solid 1px;
+    border-radius: 10px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    margin-bottom: 10px;
+}
+
 #transBtn {
     margin: 0;
     background-color: rgb(172, 51, 51);
