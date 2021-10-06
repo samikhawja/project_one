@@ -1,7 +1,6 @@
 // Get the modal
 var modal = document.getElementById("myModal");
 
-
 // Get modal quote element
 var transQuote = document.getElementById("transQuote")
 
@@ -28,11 +27,14 @@ getKanyeQuote()
 // function linked to translate button, organizes parameters (selection of language and formats text) then calls translate function
 function start(){
 
+  // Prevents function from activating without button click
   var form = document.getElementById("form")
   form.addEventListener("submit", function(event){event.preventDefault()})
 
+  // Get selected language option
   var language = document.getElementById("language").value
   
+  // Format kanye quote into url format
   quoteArray=kanyeQuote.textContent.split(" ")
   var textInput = ""
   for (i=0;i<quoteArray.length-1;i++){
@@ -42,8 +44,8 @@ function start(){
   textInput = textInput.concat(quoteArray[quoteArray.length-1])
   console.log(textInput)
 
+  // Calls tranlate after organizing parameters
   translate(language, textInput)
-
 }
 
 // The actual translate function
@@ -69,4 +71,3 @@ window.onclick = (function(event){
   }
 
 })
-
