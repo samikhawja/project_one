@@ -29,7 +29,7 @@ function start(){
 
   // Prevents function from activating without button click
   var form = document.getElementById("form")
-  form.addEventListener("submit", function(event){event.preventDefault()})
+  form.addEventListener("click", function(event){event.preventDefault()})
 
   // Get selected language option
   var language = document.getElementById("language").value
