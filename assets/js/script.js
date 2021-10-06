@@ -1,6 +1,7 @@
 // Get the modal
 var modal = document.getElementById("myModal");
 
+
 // Get modal quote element
 var transQuote = document.getElementById("transQuote")
 
@@ -69,51 +70,3 @@ window.onclick = (function(event){
 
 })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function getKanyeQuote () {
-//   var kanyeURL = 'https://api.kanye.rest/'
-// $.ajax({
-//   url: kanyeURL,
-//   method: "GET"
-// }).then(function(response){
-//   console.log("this is the kanye quote: ", response);
-//   $('#kanyeQuote').text(response.quote);
-// })
-// }
-// getKanyeQuote();
-// console.log("did it work? ", getKanyeQuote);
-// >>>>>>> 5b08ceb417e6ba058843b962ade4fef9c2016171
