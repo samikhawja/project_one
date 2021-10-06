@@ -28,7 +28,7 @@
                         <section class="card animate__animated animate__bounceInLeft">
                             <div class="row">
                                 <div class="columns">
-                                    <form>
+                                    <form id="form">
 
                                         <label>
                                             Kanye Quote
@@ -39,13 +39,13 @@
                                         <button id="refresh" onclick="getKanyeQuote()">Get New Quote</button>
 
                                         <label>Select Language
-                                            <select>
+                                            <select id="language">
                                                 <option value="yoda">Yoda</option>
                                             </select>
                                         </label>
                                         <div class="input-group">
                                             <div class="input-group-button">
-                                                <input type="submit" class="button" id="transBtn" value="Translate">
+                                                <input type="submit" class="button" onclick="start()" id="transBtn" value="Translate">
                                             </div>
 
                                         </div>
