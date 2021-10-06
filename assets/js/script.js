@@ -65,6 +65,7 @@ $.ajax({
 }).then(function(response){
   console.log("this is the kanye quote: ", response);
   $('#kanyeQuote').text(response.quote);
+  $('transQuote').html(response.quote);
 })
 }
 getKanyeQuote();
