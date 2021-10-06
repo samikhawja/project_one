@@ -71,7 +71,15 @@ header {
     margin:auto;
     padding:auto;
     min-height: fit-content;
-    
-    
+    text-align: center;
+    max-width: 95%;
+}
 
+select {
+    max-width: 200px;
+    text-align: center;
+}
+
+label {
+    font-weight: bolder;
 }
