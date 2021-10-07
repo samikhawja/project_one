@@ -120,6 +120,12 @@ refreshBtn.onclick = function(){
 // }
 
 //Dyanmic header background
+const colors = [
+  '#201F41',
+  '#422D53',
+  '#ADFF2F'
+]
+
 function createSquares(){
   const header = document.querySelector('header');
   const square = document.createElement('span');
@@ -131,6 +137,9 @@ function createSquares(){
 
   square.style.left = Math.random() * innerHeight + 'px';
   square.style.left = Math.random() * innerWidth + 'px';
+
+  const bg = colors[Math.floor(Math.random() * colors.length)];
+  square.style.background = bg;
 
   header.appendChild(square);
 
