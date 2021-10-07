@@ -114,10 +114,10 @@ refreshBtn.onclick = function(){
 }
 
 // //Vertical for Translate
-// transBtn.onclick = function(){
-//   $(kanyeYoda).addClass("shake shake-vertically");
-//   $(kanyeYoda2).addClass("shake shake-vertically");
-// }
+transBtn.onclick = function(){
+  $(kanyeYoda).addClass("shake shake-vertically");
+  $(kanyeYoda2).addClass("shake shake-vertically");
+}
 
 //Dyanmic header background
 const colors = [
