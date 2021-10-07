@@ -60,7 +60,8 @@ img {
 
 /* Modal Content/Box */
 .modal-content {
-    background-color: #fd9c9c;
+    background: radial-gradient(circle at bottom, navy 0, black 100%);
+    color: white;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid rgb(255, 248, 248);
@@ -74,7 +75,7 @@ img {
     border: black solid 1px;
     border-radius: 10px;
     width: 100px;
-    background-color: blue;
+    background-color: navy;
     color: white;
     margin-bottom: 10px;
     height: 20%;
@@ -84,7 +85,7 @@ img {
 
 #transBtn {
     margin: 0;
-    background-color: rgb(172, 51, 51);
+    background-color: navy;
     position: absolute;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -173,19 +174,19 @@ span {
     0%
     {
         transform: scale(0) translateY(0) rotate(0deg);
-        opacity: 0;
+        opacity: 1;
     }
     10%
     {
-        opacity: 1;
+        opacity: .75;
     }
     90%
     {
-        opacity: 1;
+        opacity: .5;
     }
     100%
     {
-        transform: scale(1) translateY(-500%) rotate(360deg);
+        transform: scale(1) translateY(500%) rotate(360deg);
         opacity: 0;
     }
 }
