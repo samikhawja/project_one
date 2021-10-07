@@ -3,11 +3,13 @@ body {
 }
 
 header {
-    background-color: #154f30;
-    border: 5px solid #4b5320;
+    background-color: black;
     display:flex;
     flex-direction: row;
-    justify-content: cente;
+    justify-content: center;
+    height: fit-content;
+    width: 100vw;
+    overflow: hidden;
 }
 
 img {
@@ -116,4 +118,32 @@ label {
     content: "";
     clear: both;
     display: table;
+}
+
+span {
+    position: absolute;
+    pointer-events: none;
+    background: white;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: scale(0) translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10%
+    {
+        opacity: 1;
+    }
+    90%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: scale(1) translateY(-500%) rotate(360deg);
+        opacity: 0;
+    }
 }

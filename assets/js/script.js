@@ -118,3 +118,24 @@ refreshBtn.onclick = function(){
 //   $(kanyeYoda).addClass("shake shake-vertically");
 //   $(kanyeYoda2).addClass("shake shake-vertically");
 // }
+
+//Dyanmic header background
+function createSquares(){
+  const header = document.querySelector('header');
+  const square = document.createElement('span');
+
+  var size = Math.random() * 50;
+
+  square.style.width = 20 + size + 'px';
+  square.style.height = 20 + size + 'px';
+
+  square.style.left = Math.random() * innerHeight + 'px';
+  square.style.left = Math.random() * innerWidth + 'px';
+
+  header.appendChild(square);
+
+  setTimeout(() =>{
+    square.remove()
+  },5000)
+}
+setInterval(createSquares, 150)
