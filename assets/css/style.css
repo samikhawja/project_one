@@ -18,6 +18,8 @@ header {
     overflow: hidden;
 }
 
+
+
 nav {
     font-size: larger;
     font-weight:bolder;
@@ -36,7 +38,6 @@ img {
     text-align: center;
     margin-top: 2.5%;
     border-radius: 15px;
-    
 }
 
 .quote {
@@ -56,6 +57,10 @@ img {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    animation-name: rotate;
+    animation-duration: .5s;
+    animation-iteration-count: 2s;
+    animation-timing-function: linear;
 }
 
 /* Modal Content/Box */
@@ -191,4 +196,11 @@ span {
         opacity: 0;
     }
 }
-
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

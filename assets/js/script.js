@@ -145,6 +145,9 @@ refreshBtn.onclick = function(){
   $(kanyeYoda2).addClass("shake shake-horizontally");
 }
 
+//Yoda Kanye spin
+kanyeYoda
+
 // // //Vertical for Translate
 // transBtn.onclick = function(){
 //   $(kanyeYoda).addClass("shake shake-vertically");
