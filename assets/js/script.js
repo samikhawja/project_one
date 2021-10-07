@@ -62,7 +62,8 @@ function translate(language, textInput){
       modal.style.display="inline"
       console.log(data.contents.translated)
       speak(data.contents.translated)
-      
+      window.localStorage.setItem("quote", data.contents.translated);
+      displaySave();
     })
 }
 
@@ -94,4 +95,17 @@ function speak(message){
 
 
 
+}
+
+
+// Local Storage 
+var saveQuote = document.getElementById("saveQuote");
+
+
+function displaySave() {
+  var quoteBlock = document.createElement("p");
+  quoteBlock.classList.add("saveYoda");
+  saveQuote.appendChild(quoteBlock);
+  quoteBlock.textContent = localStorage.getItem("quote");
+  console.log(quoteBlock)
 }
