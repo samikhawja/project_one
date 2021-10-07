@@ -10,6 +10,9 @@ var kanyeQuote = document.getElementById("kanyeQuote")
 //Get refresh button
 var refreshBtn = document.getElementById("refresh");
 
+//Get translate button
+var transBtn = document.getElementById("transBtn");
+
 //Get KanyeYoda
 var kanyeYoda = document.getElementById("kanyeYoda");
 var kanyeYoda2 = document.getElementById("kanyeYoda2");
@@ -102,7 +105,16 @@ function speak(message){
 
 
 }
-refreshBtn.onclick = function(event){
+//Button function to make Kanye Yoda shake head
+
+//Horizontal for Refresh
+refreshBtn.onclick = function(){
   $(kanyeYoda).addClass("shake shake-horizontally");
   $(kanyeYoda2).addClass("shake shake-horizontally");
 }
+
+// //Vertical for Translate
+// transBtn.onclick = function(){
+//   $(kanyeYoda).addClass("shake shake-vertically");
+//   $(kanyeYoda2).addClass("shake shake-vertically");
+// }

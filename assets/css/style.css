@@ -76,8 +76,7 @@ img {
 #kanyeQuote {
     margin-left: 10px;
     margin-right: 10px;
-    ;
-    
+}    
 
 
 #refreshBtn {
@@ -92,10 +91,10 @@ img {
 #kanyeQuote {
     margin:auto;
     padding:auto;
-    min-height: fit-content;
+    min-height:100px;
     text-align: center;
     max-width: 95%;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 select {
