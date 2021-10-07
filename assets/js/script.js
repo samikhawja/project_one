@@ -7,6 +7,13 @@ var transQuote = document.getElementById("transQuote")
 // Get kanyequote display
 var kanyeQuote = document.getElementById("kanyeQuote")
 
+//Get refresh button
+var refreshBtn = document.getElementById("refresh");
+
+//Get KanyeYoda
+var kanyeYoda = document.getElementById("kanyeYoda");
+var kanyeYoda2 = document.getElementById("kanyeYoda2");
+
 // Generate and display kanye quote
 function getKanyeQuote(){
   fetch("https://api.kanye.rest")
@@ -94,4 +101,8 @@ function speak(message){
 
 
 
+}
+refreshBtn.onclick = function(event){
+  $(kanyeYoda).addClass("shake shake-horizontally");
+  $(kanyeYoda2).addClass("shake shake-horizontally");
 }
