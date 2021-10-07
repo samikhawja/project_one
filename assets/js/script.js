@@ -15,7 +15,7 @@ function getKanyeQuote(){
     })
     .then(function(data){
       
-      kanyeQuote.textContent= data.quote
+      kanyeQuote.value = data.quote
       console.log("quote is: " + data.quote)
       
 
@@ -26,6 +26,7 @@ getKanyeQuote()
 
 // function linked to translate button, organizes parameters (selection of language and formats text) then calls translate function
 function start(){
+  console.log(kanyeQuote.value)
 
   // Prevents function from activating without button click
   var form = document.getElementById("form")
@@ -35,7 +36,7 @@ function start(){
   var language = document.getElementById("language").value
   
   // Format kanye quote into url format
-  quoteArray=kanyeQuote.textContent.split(" ")
+  quoteArray=kanyeQuote.value.split(" ")
   var textInput = ""
   for (i=0;i<quoteArray.length-1;i++){
     textInput = textInput.concat(quoteArray[i]+"%20")
@@ -48,7 +49,7 @@ function start(){
   translate(language, textInput)
 }
 
-// The actual translate function
+// Translates the text, then displays modal, and starts speech
 function translate(language, textInput){
   var url = "https://api.funtranslations.com/translate/"+language+".json?text="+textInput+"&api_key=ERi5YlYgaVXbRvTtr08K9AeF"
   fetch(url)
@@ -60,14 +61,37 @@ function translate(language, textInput){
       transQuote.textContent = data.contents.translated
       modal.style.display="inline"
       console.log(data.contents.translated)
-
+      speak(data.contents.translated)
+      
     })
 }
 
-// Hides modal by clicking on window
+// Hides modal by clicking on window and cancels speech
 window.onclick = (function(event){
   if (event.target == modal){
     modal.style.display="none"
+    speechSynthesis.cancel()
   }
 
 })
+
+// The speech function, first formats the text then calls speechsynthesis to speak
+function speak(message){
+
+  var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "\'","\"", " "]
+  var speechText = ""    
+  for (i=0;i<message.length;i++){
+        if (alphabet.includes(message.charAt(i))){
+          speechText = speechText + message.charAt(i)
+        }
+        else{
+          speechText = speechText + message.charAt(i)+" "
+        }
+
+      }
+      console.log(speechText)
+      speechSynthesis.speak(new SpeechSynthesisUtterance(speechText))
+
+
+
+}
