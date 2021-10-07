@@ -7,6 +7,16 @@ var transQuote = document.getElementById("transQuote")
 // Get kanyequote display
 var kanyeQuote = document.getElementById("kanyeQuote")
 
+//Get refresh button
+var refreshBtn = document.getElementById("refresh");
+
+//Get translate button
+var transBtn = document.getElementById("transBtn");
+
+//Get KanyeYoda
+var kanyeYoda = document.getElementById("kanyeYoda");
+var kanyeYoda2 = document.getElementById("kanyeYoda2");
+
 // Generate and display kanye quote
 function getKanyeQuote(){
   fetch("https://api.kanye.rest")
@@ -95,3 +105,46 @@ function speak(message){
 
 
 }
+//Button function to make Kanye Yoda shake head
+
+//Horizontal for Refresh
+refreshBtn.onclick = function(){
+  $(kanyeYoda).addClass("shake shake-horizontally");
+  $(kanyeYoda2).addClass("shake shake-horizontally");
+}
+
+// //Vertical for Translate
+transBtn.onclick = function(){
+  $(kanyeYoda).addClass("shake shake-vertically");
+  $(kanyeYoda2).addClass("shake shake-vertically");
+}
+
+//Dyanmic header background
+const colors = [
+  '#201F41',
+  '#422D53',
+  '#ADFF2F'
+]
+
+function createSquares(){
+  const header = document.querySelector('header');
+  const square = document.createElement('span');
+
+  var size = Math.random() * 50;
+
+  square.style.width = 20 + size + 'px';
+  square.style.height = 20 + size + 'px';
+
+  square.style.left = Math.random() * innerHeight + 'px';
+  square.style.left = Math.random() * innerWidth + 'px';
+
+  const bg = colors[Math.floor(Math.random() * colors.length)];
+  square.style.background = bg;
+
+  header.appendChild(square);
+
+  setTimeout(() =>{
+    square.remove()
+  },5000)
+}
+setInterval(createSquares, 150)
