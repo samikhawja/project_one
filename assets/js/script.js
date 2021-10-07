@@ -17,6 +17,9 @@ var transBtn = document.getElementById("transBtn");
 var kanyeYoda = document.getElementById("kanyeYoda");
 var kanyeYoda2 = document.getElementById("kanyeYoda2");
 
+//Grab Form Element
+var mainForm = document.getElementById("form");
+
 // Generate and display kanye quote
 function getKanyeQuote(){
   fetch("https://api.kanye.rest")
@@ -119,13 +122,14 @@ refreshBtn.onclick = function(){
 //   $(kanyeYoda2).addClass("shake shake-vertically");
 // }
 
-//Dyanmic header background
+//Dyanmic header background========
+//Colors for Header
 const colors = [
   '#201F41',
   '#422D53',
   '#ADFF2F'
 ]
-
+//Function for Dynamic Header
 function createSquares(){
   const header = document.querySelector('header');
   const square = document.createElement('span');
@@ -148,3 +152,5 @@ function createSquares(){
   },5000)
 }
 setInterval(createSquares, 150)
+// =============
+// Fancy Transition
