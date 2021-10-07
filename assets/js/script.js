@@ -154,5 +154,11 @@ function createSquares(){
 setInterval(createSquares, 150)
 // =============
 // Moment.js
-var today = moment();
-$("#time").format(today.format)
+
+setInterval(myTimer, 0);
+
+function myTimer() {
+  const d = new Date();
+  document.getElementById("time").innerHTML= d.toLocaleTimeString();
+  timeSlots();
+}
