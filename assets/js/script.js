@@ -153,4 +153,6 @@ function createSquares(){
 }
 setInterval(createSquares, 150)
 // =============
-// Fancy Transition
+// Moment.js
+var today = moment();
+$("#time").format(today.format)
