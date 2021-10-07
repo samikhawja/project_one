@@ -3,53 +3,51 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Kanye Quotes</title>
+        <title>Kanye Yoda</title>
+        <!-- Foundation CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation-prototype.min.css">
         <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+       <!-- CSS Shake Library -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake.min.css">
-        <link rel="stylesheet" type="text/css" href="csshake.css" />`
+        <link rel="stylesheet" type="text/css" href="csshake.css" />
+        
+        <!-- CSS Link -->
         <link rel="stylesheet" href="./assets/css/reset.css">
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
-        <header>
-                    <img src="assets/images/yodaKanye.png" class="shake shake-horizontally">
-                    <img src="./assets/images/yoda.png" alt="Picture of Yoda" class="row center animate__animated animate__flash">
-                    <img src="assets/images/yodaKanye.png" class="shake shake-horizontally">
+
+        <header id="dynBg">
+            <img src="assets/images/yodaKanye.png" id="kanyeYoda">
+            <img src="./assets/images/yoda.png" alt="Picture of Yoda"class="row center animate__animated animate__flash">
+            <img src="assets/images/yodaKanye.png" id="kanyeYoda2">
+
         </header>
+        <nav id="time"> </nav>
         <article class="grid-container">
             <div class="grid-x align-center">
                 <div class="cell medium-8">
                     <div class="blog-post">
-
                         <section class="card animate__animated animate__bounceInLeft">
                             <div>
                                 <div>
                                     <form id="form">
-
                                         <label>
                                             Kanye Quote
                                             <textarea id="kanyeQuote" placeholder="None"></textarea>
                                         </label>
-
-
-                                        <button id="refresh" onclick="getKanyeQuote()">Get New Quote</button>
-
-                                        
+                                        <button id="refresh" onclick="getKanyeQuote()">Get New Quote</button>  
                                         <label>Select Language
                                             <select id="language">
                                                 <option value="yoda">Yoda</option>
                                             </select>
-                                        </label>
                                         <div class="input-group">
                                             <div class="input-group-button">
                                                 <input type="submit" class="button" onclick="start()" id="transBtn" value="Translate">
                                             </div>
-
                                         </div>
                                     </form>
                                 </div>
@@ -62,27 +60,28 @@
                         <section id="myModal" class="modal">
                             <div class="modal-content">
                                 <p id="transQuote">Yeezus</p>
-
                                 <div class="input-group-button">
                                     <!-- <input type="submit" class="button" id="refreshBtn" value="Another One!"> -->
                                     <input class="button" id="refreshBtn" value="Another One!"onClick="window.location.href=window.location.href"></input>
                                 </div>
-
                             </div>
                         </section>
                     </div>
                 </div>
             </div>
         </article>
-        
-
-
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/motion-ui/1.2.3/motion-ui.min.js"></script>
         <script>
         $(document).foundation();
         </script>
+        <!-- Moment.JS -->
+        <script
+        type=“text/javascript”
+        src=“https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js”
+        ></script>
+        <!-- Our Script -->
         <script src="assets/js/script.js"></script>
     </body>
 </html>

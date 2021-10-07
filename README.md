@@ -27,19 +27,19 @@
 
 <img src="./assets/images/webpage.png" alt="Kanye Quotes Webpage">
 
-For this assignment, I had to create a weather dashbaord from scratch. Nothing was provided, so this was a true test to my knowledge and what I've learned so far. For this dashbaord, it needed a search field to recieve the weather for the location. The dashboard displays, location with date and icon, temperature, humidity, wind speeds and a color-coded UV Index. It tested my previous knowledge and I was constantly researching to ensure I had the best weather dashbaord I could deliver to the user!
+For this project, we decided on creating a webpage that would display a random quote from Kanye West and you would then have the option of translating it into Yoda. There are different animations and with rounded-corners, it makes the webpage more fun and kid friendly to a certain degree... we can't control what Kanye has to say. It tested all of our previous knowledge and we were constantly researching to ensure we had the best product we could deliver to the user!
 
-The websites I used to help create my day planner are listed below in the <a href="#acknowledgements">acknowledgements</a>.
+The websites we used to help create our project are listed below in the <a href="#acknowledgements">acknowledgements</a>.
 
 ### Built With
 
-I used <a href="https://code.visualstudio.com/">Visual Studio Code</a> to create the HTML, CSS and Javascript from scratch. I had the help of Bootstrap for formatting the HTML and JQuery to help with the coding on the Javascript!
+We used <a href="https://code.visualstudio.com/">Visual Studio Code</a> to create the HTML, CSS and Javascript from scratch. We had the help of Foundation for formatting the HTML and JQuery to help with the coding on the Javascript!
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This webpage is up-to-date every second with the time and date and will allow you to to see the current weather. You can change the location through the search bar and clicking search. Depending on what the UV Index is, an appropiate color will display for the UV Index.
+When loading this webpage, you are greeted with several animations and a quote from the one and only, Kanye. The user has the option of what language to have translated and when 'translate' is clicked a pop-up screen is presented with the translated quote and a text reader. The webpage is simple and fun, which is your favorite quote?
 
 
 <!-- USAGE EXAMPLES -->
