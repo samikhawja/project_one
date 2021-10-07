@@ -33,7 +33,7 @@ The websites I used to help create my day planner are listed below in the <a hre
 
 ### Built With
 
-I used <a href="https://code.visualstudio.com/">Visual Studio Code</a> to create the HTML, CSS and Javascript from scratch. I had the help of Bootstrap for formatting the HTML and JQuery to help with the coding on the Javascript!
+We used <a href="https://code.visualstudio.com/">Visual Studio Code</a> to create the HTML, CSS and Javascript from scratch. I had the help of Bootstrap for formatting the HTML and JQuery to help with the coding on the Javascript!
 
 
 <!-- GETTING STARTED -->
