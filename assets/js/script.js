@@ -64,8 +64,10 @@ function translate(language, textInput){
       speak(data.contents.translated)
       window.localStorage.setItem("quote", data.contents.translated);
       displaySave();
+
     })
 }
+
 
 // Hides modal by clicking on window and cancels speech
 window.onclick = (function(event){
@@ -109,3 +111,14 @@ function displaySave() {
   quoteBlock.textContent = localStorage.getItem("quote");
   console.log(quoteBlock)
 }
+
+function displayText () {
+  if(localStorage.getItem("quote")) {
+    var quoteBlock = document.createElement("p");
+  quoteBlock.classList.add("saveYoda");
+  saveQuote.appendChild(quoteBlock);
+  quoteBlock.textContent = localStorage.getItem("quote");
+  console.log(quoteBlock)
+  }
+}
+displayText()
