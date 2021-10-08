@@ -43,17 +43,45 @@ When loading this webpage, you are greeted with several animations and a quote f
 
 
 <!-- USAGE EXAMPLES -->
-## Code Snippet
+## Code Snippets
 
-While coding this weather dashbaord, this piece of code / function proved to be the hardest to figure out. I had to create different variables that would all go into one '$' and creating an 'img' tag was the hardest. It was the hardest because my webpage would display the link rather than the icon and i was through trial and error, I found out the correct formation. This part of the javascript wasn't easy but it was fun because of the challenge!
-```
-var cityN = city.toUpperCase()
-var date = new Date(response.dt*1000).toLocaleDateString();
-var icon = response.weather[0].icon;
-var iconImage = "<img src= 'https://openweathermap.org/img/w/" + icon + ".png'/>"
-$(".city-name").html(" " + cityN + " (" + date + ") " + iconImage)
-```
+FunTranslations API must take to-be-translated-text as an input. The text must be formatted into url form. In particular, all spaces must be converted to %20.
 
+Below is the text-reformat portion of the 'start' function that prepares the quote to be fed into the 'translate' function.
+```
+quoteArray=kanyeQuote.value.split(" ")
+  var textInput = ""
+  for (i=0;i<quoteArray.length-1;i++){
+    textInput = textInput.concat(quoteArray[i]+"%20")
+
+  }
+  textInput = textInput.concat(quoteArray[quoteArray.length-1])
+```
+<br>
+
+Yoda API sometimes leaves no space after punctuations, so translated quotes must be reformatted Javascript's SpeechSynthesis interface to put spaces in the correct places.
+
+Below is the 'speak' function that makes sure the translated text has appropriate grammar before adding a new speech utterance.
+
+```
+function speak(message){
+
+  var alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "\'","\"", " "]
+
+  var speechText = ""    
+  for (i=0;i<message.length;i++){
+        if (alphabet.includes(message.charAt(i))){
+          speechText = speechText + message.charAt(i)
+        }
+        else{
+          speechText = speechText + message.charAt(i)+" "
+        }
+
+      }
+      console.log(speechText)
+      speechSynthesis.speak(new SpeechSynthesisUtterance(speechText))
+}
+```
 
 
 <!-- LICENSE -->
@@ -88,3 +116,5 @@ Live Link: [Project One](https://samikhawja.github.io/project_one/)
 * [Mozilla](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 * [Foundation](https://get.foundation/)
 * [JQuery](https://jquery.com/)
+* [KanyeAPI](https://kanye.rest/)
+* [FunTranslationsAPI](https://funtranslations.com/api/)
