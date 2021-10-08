@@ -23,18 +23,20 @@
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
-        
+        <!-- Header images in order of kanyeYoda, Logo, kanyeYoda2 -->
         <header id="dynBg">
-            <img src="assets/images/yodaKanye.png" id="kanyeYoda">
+            <img src="assets/images/yodaKanye.png" alt="Kanye Yoda" id="kanyeYoda">
             <img src="./assets/images/yoda.png" alt="Picture of Yoda"class="row center animate__animated animate__flash">
-            <img src="assets/images/yodaKanye.png" id="kanyeYoda2">
-
+            <img src="assets/images/yodaKanye.png" alt="Kanye Yoda" id="kanyeYoda2">
         </header>
+
+        <!-- Nav with time display -->
         <nav id="time"> </nav>
+
+        <!-- Main Container -->
         <article class="grid-container">
             <div class="grid-x align-center">
                 <div class="cell medium-8">
-                    <div class="blog-post">
                         <section class="card animate__animated animate__bounceInLeft">
                             <div>
                                 <div>
@@ -56,11 +58,12 @@
                                     </form>
                                 </div>
                             </div>
+                        <!-- Local Storage -->
                         <div class="card" id="saveQuote">
-                            <h6>Most Recent Quote:</h6>
-                           
+                            <h6>Most Recent Quote:</h6> 
                         </div>
                         </section>
+                        <!-- Modal -->
                         <section id="myModal" class="modal">
                             <div class="modal-content">
                                 <p id="transQuote">Yeezus</p>
@@ -70,7 +73,7 @@
                                 </div>
                             </div>
                         </section>
-                    </div>
+
                 </div>
             </div>
         </article>
@@ -80,7 +83,6 @@
         <script>
         $(document).foundation();
         </script>
-        <!-- Moment.JS -->
         <script
         type=“text/javascript”
         src=“https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js”
