@@ -30,6 +30,10 @@ function getKanyeQuote(){
       
       kanyeQuote.value = data.quote
       console.log("quote is: " + data.quote)
+
+      speechSynthesis.cancel()
+      $(kanyeYoda).addClass("shake shake-horizontally");
+      $(kanyeYoda2).addClass("shake shake-horizontally");
       
 
   })
@@ -140,10 +144,7 @@ displayText()
 //Button function to make Kanye Yoda shake head
 
 //Horizontal for Refresh
-refreshBtn.onclick = function(){
-  $(kanyeYoda).addClass("shake shake-horizontally");
-  $(kanyeYoda2).addClass("shake shake-horizontally");
-}
+
 
 // // //Vertical for Translate
 // transBtn.onclick = function(){
