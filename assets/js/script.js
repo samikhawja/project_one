@@ -146,6 +146,9 @@ displayText()
 //Horizontal for Refresh
 
 
+//Yoda Kanye spin
+kanyeYoda
+
 // // //Vertical for Translate
 // transBtn.onclick = function(){
 //   $(kanyeYoda).addClass("shake shake-vertically");
@@ -192,3 +195,4 @@ function myTimer() {
   document.getElementById("time").innerHTML= d.toLocaleTimeString();
 }
 
+// ====
