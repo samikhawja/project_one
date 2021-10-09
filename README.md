@@ -44,7 +44,10 @@ When loading this webpage, you are greeted with several animations and a quote f
 
 <!-- USAGE EXAMPLES -->
 ## Code Snippets
-
+<img src="./assets/images/Mobile Kanye Yoda.gif">
+Built to be mobile responsive and dynamic, our projcet utilzes built in java script to create falling objects from the header along with our additional libraries of animations to create the initial page and button click effects.
+<img src="./assets/images/dynamicBG..png">
+<br>
 FunTranslations API must take to-be-translated-text as an input. The text must be formatted into url form. In particular, all spaces must be converted to %20.
 
 Below is the text-reformat portion of the 'start' function that prepares the quote to be fed into the 'translate' function.
@@ -82,6 +85,9 @@ function speak(message){
       speechSynthesis.speak(new SpeechSynthesisUtterance(speechText))
 }
 ```
+<br>
+We also wanted to provide the user the ability to see their past generated tweets so we utilized localStorage to save the most past quotes produced.
+<img src="./assets/images/localStorage.png">
 
 
 <!-- LICENSE -->

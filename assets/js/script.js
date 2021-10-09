@@ -141,20 +141,6 @@ function displayText () {
 }
 displayText()
 
-//Button function to make Kanye Yoda shake head
-
-//Horizontal for Refresh
-
-
-//Yoda Kanye spin
-kanyeYoda
-
-// // //Vertical for Translate
-// transBtn.onclick = function(){
-//   $(kanyeYoda).addClass("shake shake-vertically");
-//   $(kanyeYoda2).addClass("shake shake-vertically");
-// }
-
 //Dyanmic header background
 //Colors for Header
 const colors = [
