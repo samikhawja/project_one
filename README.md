@@ -45,8 +45,34 @@ When loading this webpage, you are greeted with several animations and a quote f
 <!-- USAGE EXAMPLES -->
 ## Code Snippets
 <img src="./assets/images/Mobile Kanye Yoda.gif">
-Built to be mobile responsive and dynamic, our projcet utilzes built in java script to create falling objects from the header along with our additional libraries of animations to create the initial page and button click effects.
-<img src="./assets/images/dynamicBG..png">
+Built to be mobile responsive and dynamic, our projcet utilzes built in java script to create falling objects from the header along with our additional libraries of animations to create the initial page and button click effects. We utilized the Math.Random function to create different square sized pixels that would descend on screen, changing opacity based on their relative size on screen.
+
+Below is the snippet of the Math.Random function creating the different sized square pixels by generating a random width/height, the pixels entry location within the header is then determined again by using Math.random in a simple equation. A color for the pixel is then chosen randomoly from a declared color array not shown and finally the square is appended. We utilized a timeout function to create a pause in the function so squares would not overwhelm the screen with non-stop falling.
+```
+function createSquares(){
+  const header = document.querySelector('header');
+  const square = document.createElement('span');
+
+  var size = Math.random() * 50;
+
+  square.style.width = 20 + size + 'px';
+  square.style.height = 20 + size + 'px';
+
+  square.style.left = Math.random() * innerHeight + 'px';
+  square.style.left = Math.random() * innerWidth + 'px';
+
+  const bg = colors[Math.floor(Math.random() * colors.length)];
+  square.style.background = bg;
+
+  header.appendChild(square);
+
+  setTimeout(() =>{
+    square.remove()
+  },5000)
+}
+setInterval(createSquares, 150)
+```
+
 <br>
 FunTranslations API must take to-be-translated-text as an input. The text must be formatted into url form. In particular, all spaces must be converted to %20.
 
@@ -86,8 +112,7 @@ function speak(message){
 }
 ```
 <br>
-We also wanted to provide the user the ability to see their past generated tweets so we utilized localStorage to save the most past quotes produced.
-<img src="./assets/images/localStorage.png">
+
 
 
 <!-- LICENSE -->
